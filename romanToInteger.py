@@ -5,7 +5,7 @@ extra_1 = ['V','X','L','C','D','M']
 def romanToInteger(n):
      num_list = [str(x) for x in n.split(',')]
      value = 0
-     print('commit')
+     print('commited')
      for i in num_list:
          rom = num_list(i)
          if( i in ro_vals):
