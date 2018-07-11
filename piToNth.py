@@ -1,4 +1,5 @@
-from decimal import *
+from decimal import Decimal
+from decimal import getcontext
 getcontext().prec = 25
 def factorial(n):
     if n < 1:
@@ -14,7 +15,8 @@ def piToNth(num):
         k = k + 1 
     pi = (pi ** Decimal(-1)) / Decimal(12) 
     return pi 
-
+num = Decimal(input("Give the position till which you want the Pi to be tracked: "))
+print(piToNth(num))
 
 
     
