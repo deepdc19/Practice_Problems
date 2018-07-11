@@ -2,8 +2,9 @@ from decimal import Decimal
 from decimal import getcontext
 def piToNth(num): 
     """
-    Bailey–Borwein–Plouffe-algorithm to compute pi to `num` digit
+     Bailey–Borwein–Plouffe-algorithm to compute pi to `num` digit
     https://en.wikipedia.org/wiki/Bailey%E2%80%93Borwein%E2%80%93Plouffe_formula
+    
     """
     pi = Decimal(0)
     k = 0
