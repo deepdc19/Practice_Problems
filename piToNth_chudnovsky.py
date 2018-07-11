@@ -6,7 +6,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-def piToNth(num):
+def piToNth(num): #chudnovsky-algorithm
     pi = Decimal(0)
     k = 0
     while k < num:
