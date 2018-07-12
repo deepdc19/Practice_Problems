@@ -1,16 +1,33 @@
 from decimal import Decimal
 from decimal import getcontext
+
 def factorial(n):
+    '''
+    Factorial function to find the factorial of the functions
+    https://en.wikipedia.org/wiki/Factorial
+    
+    '''
     if n < 1:
         return 1
     else:
         return n * factorial(n-1)
 
-def piToNth(num): #chudnovsky-algorithm
+def piToNth(num):
+    '''
+     chudnovsky-algorithm to compute pi to 'num' digit
+    https://en.wikipedia.org/wiki/Chudnovsky_algorithm
+
+    '''
     pi = Decimal(0)
     k = 0
     while k < num:
-        pi += (Decimal(-1)**(k) * Decimal(factorial(6*k)) * Decimal((545140134*k + 13591409))) / (Decimal(factorial(3*k)) * Decimal((factorial(k)**3)) * Decimal((640320)**((3*k+3)/2)))
+        first = Decimal(-1)**(k)
+        second = Decimal(factorial(6*k))
+        third =  Decimal((545140134*k + 13591409))
+        fourth = Decimal(factorial(3*k))
+        fifth = Decimal((factorial(k)**3))
+        sixth =  Decimal((640320)**((3*k+3)/2))
+        pi += (first*second*third)/(fourth*fifth*sixth)
         k = k + 1 
     pi = (pi ** Decimal(-1)) / Decimal(12) 
     return pi 
