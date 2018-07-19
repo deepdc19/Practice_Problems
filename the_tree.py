@@ -5,7 +5,7 @@ class TreeNode():
     TreeNode represents the binary tree node
 
     '''
-    def __init__(self):
+    def __init__(self, value=None):
         self.value = value
         self.left = None  
         self.right = None
