@@ -37,13 +37,25 @@ class linked_list:
         while pos != index:
             temp = temp.next 
             pos += 1
-        return temp.data
+        return temp
     
     def getMiddle(self):
         if self.length() % 2 == 0: 
-            middle = self.getIndex(self.length() / 2)
-            return middle
+            return self.getIndex(self.length() / 2)
         return self.getIndex(((self.length() + 1) / 2) - 1)  
+    
+    def getMiddleList(self):
+        middle_list = []
+        if self.length() % 2 == 0: 
+            temp = self.getIndex(self.length() / 2)
+            while temp.next != None:
+                middle_list.append(temp.data)
+            return middle_list
+        temp = self.getIndex(((self.length() + 1) / 2) - 1)
+        while temp != None:
+            middle_list.append(temp.data)
+            temp = temp.next
+        return middle_list 
         
         
         
