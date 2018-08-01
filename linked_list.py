@@ -28,6 +28,25 @@ class linked_list:
             current = current.next
             temp.append(current.data)
         print (temp)
+    
+    def getIndex(self,index):
+        if index >= self.length():
+            return "The index is out of range"
+        temp = self.head.next
+        pos = 0
+        while pos != index:
+            temp = temp.next 
+            pos += 1
+        return temp.data
+    
+    def getMiddle(self):
+        if self.length() % 2 == 0: 
+            middle = self.getIndex(self.length() / 2)
+            return middle
+        return self.getIndex(((self.length() + 1) / 2) - 1)  
+        
+        
+        
 
 
 
