@@ -41,9 +41,9 @@ class linked_list:
     
     def getMiddle(self):
         if self.length() % 2 == 0: 
-            middle = self.getIndex(self.length() / 2)
-        else: middle = self.getIndex(((self.length() + 1) / 2) - 1)
-    
+            ans = self.getIndex(self.length() / 2)
+        else: ans = self.getIndex(((self.length() + 1) / 2) - 1)
+        
     def getMiddleList(self):
         middle_list = []
         if self.length() % 2 == 0: 
