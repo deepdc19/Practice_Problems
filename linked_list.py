@@ -43,7 +43,15 @@ class linked_list:
         if self.length() % 2 == 0: 
             ans = self.getIndex(self.length() / 2)
         else: ans = self.getIndex(((self.length() + 1) / 2) - 1)
-        
+        return ans
+
+    def getMiddleNode(self):
+        slow = fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
     def getMiddleList(self):
         middle_list = []
         if self.length() % 2 == 0: 
