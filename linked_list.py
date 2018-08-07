@@ -13,7 +13,7 @@ class linked_list:
             current = current.next
         current.next = temp
     
-    def remove_last(self):
+    def remove(self):
         temp = self.head
         while temp.next.next != None:
             temp = temp.next
