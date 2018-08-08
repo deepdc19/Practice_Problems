@@ -70,9 +70,16 @@ class linked_list:
             middle_list.append(temp.data)
             temp = temp.next
         return middle_list 
-        
-        
-        
-
-
-
+    
+    def reverseList(self):
+        start = self.head
+        rev = linked_list()
+        while start.next != None:
+            temp = self.head.next
+            while temp.next != None:
+                temp = temp.next
+            rev.append(temp.data)
+            self.remove()
+        return rev
+    
+    
