@@ -82,4 +82,26 @@ class linked_list:
             self.remove()
         return rev
     
+    def merge_Slist(self,l2):
+        p1 = self.head.next
+        p2 = l2.head.next
+        final = linked_list()
+        while p1 or p2:
+            if p1 == None:
+                final.append(p2.data)
+                p2 = p2.next
+            elif p2 == None:
+                final.append(p1.data)
+                p1 = p1.next
+            elif p1.data < p2.data:
+                final.append(p1.data)
+                p1 = p1.next
+            elif p1.data == p2.data:
+                final.append(p1.data)
+                p1 = p1.next
+                p2 = p2.next
+            else:
+                final.append(p2.data)
+                p2 = p2.next
+        final.display()
     
