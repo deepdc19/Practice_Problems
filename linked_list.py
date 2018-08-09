@@ -105,3 +105,14 @@ class linked_list:
                 p2 = p2.next
         final.display()
     
+    def remove_duplicates(self):
+        start = self.head.next
+        temp = self.head.next.next
+        while temp != None:
+            if start.data == temp.data:
+                start.next = temp.next
+                temp = temp.next
+            else:
+                start = start.next 
+                temp = temp.next
+        self.display()
