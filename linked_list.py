@@ -116,3 +116,14 @@ class linked_list:
                 start = start.next 
                 temp = temp.next
         self.display()
+    
+    def hasCycle(self):
+        start = self.head.next
+        nodes = {}
+        while start.next != None:
+            if start in nodes:
+                return True
+            nodes[start] = start.data
+            start = start.next
+        return False 
+        
